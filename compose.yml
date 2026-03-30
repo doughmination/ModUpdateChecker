@@ -1,0 +1,8 @@
+services:
+  bot:
+    build: .
+    container_name: RinthChecker
+    restart: unless-stopped
+    volumes:
+      - ./.env:/app/.env:ro
+      - ./.env.keys:/app/.env.keys:ro
